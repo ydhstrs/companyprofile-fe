@@ -1,0 +1,33 @@
+<template>
+    <div>
+        <label class="
+            block 
+            uppercase 
+            tracking-wide 
+            text-gray-900 
+            text-xs 
+            font-bold 
+            mb-2"
+        >
+            {{ label }}
+        </label>
+        <img class="
+            rounded 
+            w-full
+            border-solid 
+            border-4 
+            border-green-500" 
+            :src="image" 
+        >
+    </div>
+</template>
+
+<script setup>
+    import { defineProps, toRefs } from 'vue'
+
+    // PROPS
+    const props = defineProps({ label: String, image: String })
+    const { label, image } = toRefs(props)
+    // PROPS END
+
+</script>
